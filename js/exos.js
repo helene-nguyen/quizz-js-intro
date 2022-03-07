@@ -15,13 +15,14 @@ var solution1 = "la mer Noire";
 // Ton code ici...
 
 var reponse1 = prompt(question1);
+var solutionLower = solution1.toLowerCase();
+var reponseLower = reponse1.toLowerCase();
 
-if (reponse1 === solution1) {
+if (solutionLower === reponseLower) {
     alert("Gagné !");
 } else {
     alert('Perdu...');
 }
-
 
 /* Exo 3 */
 // Ton code ici...
@@ -42,9 +43,9 @@ var congrateAll = "Bravo, vous avez toutes les réponses justes !";
 var congrateOne = "Mince, vous n'avez qu'une seule bonne réponse";
 var noCongrate = "Bon, va falloir réviser tout ça !";
 
-if (reponse1 === solution1 && reponse2Parse === solution2) {
+if (reponseLower === solutionLower && reponse2Parse === solution2) {
     alert(congrateAll);
-} else if (reponse1 != solution1 && reponse2Parse != solution2) {
+} else if (reponseLower != solutionLower && reponse2Parse != solution2) {
     alert(noCongrate);
 } else {
     alert(congrateOne);
@@ -53,7 +54,7 @@ if (reponse1 === solution1 && reponse2Parse === solution2) {
 //BONUS how many good answers
 var score = 0;
 
-if (reponse1 === solution1) {
+if (reponseLower === solutionLower) {
 
     score++;
 
@@ -63,7 +64,7 @@ if (reponse1 === solution1) {
     } else if (reponse2Parse != solution2) {
         alert("Vous avez " + score + " point !");
     }
-} else if (reponse1 != solution1) {
+} else if (reponseLower != solutionLower) {
 
     if (reponse2Parse === solution2) {
         score++;
